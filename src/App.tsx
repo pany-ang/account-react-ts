@@ -7,7 +7,8 @@ import {
   Switch,
   Route,
   Link,
-  Redirect
+  Redirect,
+  withRouter
 } from "react-router-dom";
 import Tags from 'components/Tags/index';
 import Money from 'components/Money/index';
@@ -30,7 +31,7 @@ class App extends Component<any, StateType> {
   render() {
     return (
       <Fragment>
-        {/* <Router>
+        <Router>
           <div>
             <nav>
               <ul>
@@ -45,7 +46,6 @@ class App extends Component<any, StateType> {
                 </li>
               </ul>
             </nav>
-
             <Switch>
               <Redirect exact from="/" to="/money" />
               <Route path="/tags">
@@ -62,7 +62,8 @@ class App extends Component<any, StateType> {
               </Route>
             </Switch>
           </div>
-        </Router> */}
+        </Router>
+
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -91,9 +92,9 @@ class App extends Component<any, StateType> {
               this.setState({
                 selectedTabkey: 'tags',
               });
+              this.props.history.push('/tags')
             }}
           >
-            <Tags />
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -119,9 +120,9 @@ class App extends Component<any, StateType> {
               this.setState({
                 selectedTabkey: 'money',
               });
+              this.props.history.push('/money')
             }}
           >
-            <Money />
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -147,9 +148,9 @@ class App extends Component<any, StateType> {
               this.setState({
                 selectedTabkey: 'statistics',
               });
+              this.props.history.push('/statistics')
             }}
           >
-            <Statistics />
           </TabBar.Item>
         </TabBar>
       </Fragment>
