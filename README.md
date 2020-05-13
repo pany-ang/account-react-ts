@@ -11,3 +11,7 @@
 
 # 为了使import引入JS时更加方便（实现Vue中@符号的效果），需要在tsconfig.json中添加：
 ## "baseUrl": "src",
+
+# 因为使用了TS，所有在安装依赖的时候，还必须安装依赖的TS声明文件，比如Router：
+## npm install --save react-router-dom
+## npm install @types/react-router-dom
