@@ -13,11 +13,12 @@ import Tags from 'components/Tags/index';
 import Money from 'components/Money/index';
 import Statistics from 'components/Statistics/index';
 import NoMatch from 'components/NoMatch/index';
-import { stringify } from 'querystring';
 
+type StateType = {
+  selectedTabkey: string
+}
 
-
-class App extends Component<any, any> {
+class App extends Component<any, StateType> {
 
   constructor(props: any) {
     super(props);
@@ -28,43 +29,45 @@ class App extends Component<any, any> {
 
   render() {
     return (
-      <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/tags">标签页</Link>
-              </li>
-              <li>
-                <Link to="/money">记账页</Link>
-              </li>
-              <li>
-                <Link to="/statistics">统计页</Link>
-              </li>
-            </ul>
-          </nav>
+      <Fragment>
+        {/* <Router>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/tags">标签页</Link>
+                </li>
+                <li>
+                  <Link to="/money">记账页</Link>
+                </li>
+                <li>
+                  <Link to="/statistics">统计页</Link>
+                </li>
+              </ul>
+            </nav>
 
-          <Switch>
-            <Redirect exact from="/" to="/money" />
-            <Route path="/tags">
-              <Tags />
-            </Route>
-            <Route path="/money">
-              <Money />
-            </Route>
-            <Route path="/statistics">
-              <Statistics />
-            </Route>
-            <Route path="*">
-              <NoMatch />
-            </Route>
-          </Switch>
-        </div>
-
+            <Switch>
+              <Redirect exact from="/" to="/money" />
+              <Route path="/tags">
+                <Tags />
+              </Route>
+              <Route path="/money">
+                <Money />
+              </Route>
+              <Route path="/statistics">
+                <Statistics />
+              </Route>
+              <Route path="*">
+                <NoMatch />
+              </Route>
+            </Switch>
+          </div>
+        </Router> */}
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
           barTintColor="white"
+          noRenderContent={true}
         >
           <TabBar.Item
             icon={<div style={{
@@ -90,8 +93,8 @@ class App extends Component<any, any> {
               });
             }}
           >
-            1
-        </TabBar.Item>
+            <Tags />
+          </TabBar.Item>
           <TabBar.Item
             icon={
               <div style={{
@@ -118,8 +121,8 @@ class App extends Component<any, any> {
               });
             }}
           >
-            2
-        </TabBar.Item>
+            <Money />
+          </TabBar.Item>
           <TabBar.Item
             icon={
               <div style={{
@@ -146,10 +149,10 @@ class App extends Component<any, any> {
               });
             }}
           >
-            3
-        </TabBar.Item>
+            <Statistics />
+          </TabBar.Item>
         </TabBar>
-      </Router>
+      </Fragment>
     );
   }
 }

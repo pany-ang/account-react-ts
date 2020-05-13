@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import 'components/Money/index.scss'
 
 class Money extends Component {
 
@@ -15,7 +16,7 @@ class Money extends Component {
     return (
       // 如果外层不想用div包裹，可以用Fragment
       <Fragment>
-        <h2>Money</h2>
+        <div className="content">Money</div>
       </Fragment>
     );
   }

@@ -15,3 +15,6 @@
 # 因为使用了TS，所有在安装依赖的时候，还必须安装依赖的TS声明文件，比如Router：
 ## npm install --save react-router-dom
 ## npm install @types/react-router-dom
+
+# svg更强大的用法：SVG symbols
+## 需要借助两个库：svg-sprite-loader 和 svgo-loader
