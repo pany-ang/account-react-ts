@@ -24,4 +24,4 @@ React项目中解决css的热门方案: styled-components
 React中插槽可以由this.props.children实现
 
 ### 利用NavLink的activeClassName属性，可以为设置选中的a标签（NavLink标签）添加样式
-<NavLink to="/" activeClassName="selected" ></NavLink>
+`<NavLink to="/" activeClassName="selected" ></NavLink>`
