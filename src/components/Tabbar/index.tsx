@@ -1,23 +1,23 @@
 import React, { Component, Fragment } from 'react';
-import { Redirect } from "react-router-dom";
 import { TabBar } from 'antd-mobile';
+import { withRouter } from "react-router-dom";
 
-class Tags extends Component<any, any> {
+class Tabbar extends Component<any, any> {
 
-  constructor(props: any) { // 构造函数，设置state初始值
+  constructor(props: any) {
     super(props);
-    this.state = {};
+    this.state = {
+      
+    };
   }
 
   componentDidMount() { // 组件完成挂载时运行
-
+    console.log(this.props);
   }
 
   render() {
     return (
-      // 如果外层不想用div包裹，可以用Fragment
       <Fragment>
-        <h2>Tags</h2>
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -41,7 +41,7 @@ class Tags extends Component<any, any> {
             }
             title="标签"
             key="tags"
-            selected={true}
+            selected={this.props.location.pathname === '/tags'}
             onPress={() => {
               this.props.history.push('/tags')
             }}
@@ -66,7 +66,7 @@ class Tags extends Component<any, any> {
             }
             title="记账"
             key="money"
-            selected={false}
+            selected={this.props.location.pathname === '/money'}
             onPress={() => {
               this.props.history.push('/money')
             }}
@@ -91,7 +91,7 @@ class Tags extends Component<any, any> {
             }
             title="统计"
             key="statistics"
-            selected={false}
+            selected={this.props.location.pathname === '/statistics'}
             onPress={() => {
               this.props.history.push('/statistics')
             }}
@@ -101,6 +101,7 @@ class Tags extends Component<any, any> {
       </Fragment>
     );
   }
+
 }
 
-export default Tags;
+export default withRouter(Tabbar);

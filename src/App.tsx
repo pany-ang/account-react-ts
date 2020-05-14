@@ -1,30 +1,25 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-// import { TabBar } from 'antd-mobile';
 import {
   // BrowserRouter as Router,
   HashRouter as Router,
   Switch,
   Route,
-  Link,
+  // Link,
   Redirect,
   // withRouter
 } from "react-router-dom";
-import Tags from 'components/Tags/index';
-import Money from 'components/Money/index';
-import Statistics from 'components/Statistics/index';
-import NoMatch from 'components/NoMatch/index';
+import Tags from 'pages/Tags/index';
+import Money from 'pages/Money/index';
+import Statistics from 'pages/Statistics/index';
+import NoMatch from 'pages/NoMatch/index';
 
-type StateType = {
-  selectedTabkey: string
-}
-
-class App extends Component<any, StateType> {
+class App extends Component<any, any> {
 
   constructor(props: any) {
     super(props);
     this.state = {
-      selectedTabkey: 'money',
+
     };
   }
 
@@ -33,7 +28,7 @@ class App extends Component<any, StateType> {
       <Fragment>
         <Router>
           <div>
-            <nav>
+            {/* <nav>
               <ul>
                 <li>
                   <Link to="/tags">标签页</Link>
@@ -45,7 +40,7 @@ class App extends Component<any, StateType> {
                   <Link to="/statistics">统计页</Link>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
             {/* <Switch>
               <Redirect exact from="/" to="/money" />
               <Route path="/tags">
@@ -62,9 +57,10 @@ class App extends Component<any, StateType> {
               </Route>
             </Switch> */}
             <Switch>
-              <Route path="/tags" component={Tags} />
-              <Route path="/money" component={Money} />
-              <Route path="/statistics" component={Statistics} />
+              <Redirect exact from="/" to="/money" />
+              <Route exact path="/tags" component={Tags} />
+              <Route exact path="/money" component={Money} />
+              <Route exact path="/statistics" component={Statistics} />
               <Route path="*" component={NoMatch} />
             </Switch>
           </div>
