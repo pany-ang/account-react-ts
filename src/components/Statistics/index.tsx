@@ -22,7 +22,7 @@ class Statistics extends Component {
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
           barTintColor="white"
-          noRenderContent={true}
+          noRenderContent={false}
         >
           <TabBar.Item
             icon={<div style={{
@@ -43,9 +43,10 @@ class Statistics extends Component {
             key="tags"
             selected={false}
             onPress={() => {
-              this.renderContent('tags')
+              
             }}
           >
+            {this.renderContent('tags')}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -68,9 +69,10 @@ class Statistics extends Component {
             key="money"
             selected={false}
             onPress={() => {
-              this.renderContent('money')
+              
             }}
           >
+            {this.renderContent('money')}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -93,9 +95,10 @@ class Statistics extends Component {
             key="statistics"
             selected={true}
             onPress={() => {
-              this.renderContent('statistics')
+              
             }}
           >
+            {this.renderContent('statistics')}
           </TabBar.Item>
         </TabBar>
       </Fragment>
