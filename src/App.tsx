@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import { TabBar } from 'antd-mobile';
+// import { TabBar } from 'antd-mobile';
 import {
   // BrowserRouter as Router,
   HashRouter as Router,
@@ -8,7 +8,7 @@ import {
   Route,
   Link,
   Redirect,
-  withRouter
+  // withRouter
 } from "react-router-dom";
 import Tags from 'components/Tags/index';
 import Money from 'components/Money/index';
@@ -47,7 +47,7 @@ class App extends Component<any, StateType> {
               </ul>
             </nav>
             <Switch>
-              <Redirect exact from="/" to="/money" />
+              {/* <Redirect exact from="/" to="/money" /> */}
               <Route path="/tags">
                 <Tags />
               </Route>
@@ -63,8 +63,7 @@ class App extends Component<any, StateType> {
             </Switch>
           </div>
         </Router>
-
-        <TabBar
+        {/* <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
           barTintColor="white"
@@ -92,7 +91,7 @@ class App extends Component<any, StateType> {
               this.setState({
                 selectedTabkey: 'tags',
               });
-              this.props.history.push('/tags')
+              this.renderContent('tags')
             }}
           >
           </TabBar.Item>
@@ -120,7 +119,7 @@ class App extends Component<any, StateType> {
               this.setState({
                 selectedTabkey: 'money',
               });
-              this.props.history.push('/money')
+              this.renderContent('money')
             }}
           >
           </TabBar.Item>
@@ -148,14 +147,20 @@ class App extends Component<any, StateType> {
               this.setState({
                 selectedTabkey: 'statistics',
               });
-              this.props.history.push('/statistics')
+              this.renderContent('statistics')
             }}
           >
           </TabBar.Item>
-        </TabBar>
+        </TabBar> */}
       </Fragment>
     );
   }
+
+  // renderContent(params: string) {
+  //   return (
+  //     <Redirect to={"/" + params} />
+  //   )
+  // }
 }
 
 export default App;
