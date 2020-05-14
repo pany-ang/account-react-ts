@@ -45,3 +45,15 @@ React中插槽可以由this.props.children实现
 `<NavLink to="/" activeClassName="selected" ></NavLink>`
 
 ***
+
+### React函数组件在的TS类型是：React.FC
+```
+const App: React.FC = (props) => {
+  return ()
+}
+```
+
+### React函数组件中使用state
+```
+const [tags, setTags] = useState<String[]>(['衣', '食', '住', '行'])
+```

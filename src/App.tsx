@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import './App.css';
 import {
   // BrowserRouter as Router,
@@ -13,21 +13,12 @@ import Money from 'pages/Money/index';
 import Statistics from 'pages/Statistics/index';
 import NoMatch from 'pages/NoMatch/index';
 
-class App extends Component<any, any> {
-
-  constructor(props: any) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <Fragment>
-        <Router>
-          <div>
-            {/* <nav>
+const App: React.FC = () => {
+  return (
+    <Fragment>
+      <Router>
+        <div>
+          {/* <nav>
               <ul>
                 <li>
                   <Link to="/tags">标签页</Link>
@@ -40,7 +31,7 @@ class App extends Component<any, any> {
                 </li>
               </ul>
             </nav> */}
-            {/* <Switch>
+          {/* <Switch>
               <Redirect exact from="/" to="/money" />
               <Route path="/tags">
                 <Tags />
@@ -55,18 +46,17 @@ class App extends Component<any, any> {
                 <NoMatch />
               </Route>
             </Switch> */}
-            <Switch>
-              <Redirect exact from="/" to="/money" />
-              <Route exact path="/tags" component={Tags} />
-              <Route exact path="/money" component={Money} />
-              <Route exact path="/statistics" component={Statistics} />
-              <Route path="*" component={NoMatch} />
-            </Switch>
-          </div>
-        </Router>
-      </Fragment>
-    );
-  }
+          <Switch>
+            <Redirect exact from="/" to="/money" />
+            <Route exact path="/tags" component={Tags} />
+            <Route exact path="/money" component={Money} />
+            <Route exact path="/statistics" component={Statistics} />
+            <Route path="*" component={NoMatch} />
+          </Switch>
+        </div>
+      </Router>
+    </Fragment>
+  )
 }
 
 export default App;
