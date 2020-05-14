@@ -46,8 +46,8 @@ class App extends Component<any, StateType> {
                 </li>
               </ul>
             </nav>
-            <Switch>
-              {/* <Redirect exact from="/" to="/money" /> */}
+            {/* <Switch>
+              <Redirect exact from="/" to="/money" />
               <Route path="/tags">
                 <Tags />
               </Route>
@@ -60,107 +60,18 @@ class App extends Component<any, StateType> {
               <Route path="*">
                 <NoMatch />
               </Route>
+            </Switch> */}
+            <Switch>
+              <Route path="/tags" component={Tags} />
+              <Route path="/money" component={Money} />
+              <Route path="/statistics" component={Statistics} />
+              <Route path="*" component={NoMatch} />
             </Switch>
           </div>
         </Router>
-        {/* <TabBar
-          unselectedTintColor="#949494"
-          tintColor="#33A3F4"
-          barTintColor="white"
-          noRenderContent={true}
-        >
-          <TabBar.Item
-            icon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
-            selectedIcon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
-            title="标签"
-            key="tags"
-            selected={this.state.selectedTabkey === 'tags'}
-            onPress={() => {
-              this.setState({
-                selectedTabkey: 'tags',
-              });
-              this.renderContent('tags')
-            }}
-          >
-          </TabBar.Item>
-          <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            title="记账"
-            key="money"
-            selected={this.state.selectedTabkey === 'money'}
-            onPress={() => {
-              this.setState({
-                selectedTabkey: 'money',
-              });
-              this.renderContent('money')
-            }}
-          >
-          </TabBar.Item>
-          <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            title="统计"
-            key="statistics"
-            selected={this.state.selectedTabkey === 'statistics'}
-            onPress={() => {
-              this.setState({
-                selectedTabkey: 'statistics',
-              });
-              this.renderContent('statistics')
-            }}
-          >
-          </TabBar.Item>
-        </TabBar> */}
       </Fragment>
     );
   }
-
-  // renderContent(params: string) {
-  //   return (
-  //     <Redirect to={"/" + params} />
-  //   )
-  // }
 }
 
 export default App;

@@ -2,13 +2,13 @@ import React, { Component, Fragment } from 'react';
 
 class NoMatch extends Component {
 
-  constructor(props:any) { // 构造函数，设置state初始值
+  constructor(props: any) { // 构造函数，设置state初始值
     super(props);
-    this.state = { };
+    this.state = {};
   }
 
   componentDidMount() { // 组件完成挂载时运行
-    
+
   }
 
   render() {

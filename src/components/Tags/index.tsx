@@ -2,15 +2,15 @@ import React, { Component, Fragment } from 'react';
 import { Redirect } from "react-router-dom";
 import { TabBar } from 'antd-mobile';
 
-class Tags extends Component {
+class Tags extends Component<any, any> {
 
-  constructor(props:any) { // 构造函数，设置state初始值
+  constructor(props: any) { // 构造函数，设置state初始值
     super(props);
-    this.state = { };
+    this.state = {};
   }
 
   componentDidMount() { // 组件完成挂载时运行
-    
+
   }
 
   render() {
@@ -22,7 +22,7 @@ class Tags extends Component {
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
           barTintColor="white"
-          noRenderContent={false}
+          noRenderContent={true}
         >
           <TabBar.Item
             icon={<div style={{
@@ -43,10 +43,9 @@ class Tags extends Component {
             key="tags"
             selected={true}
             onPress={() => {
-              
+              this.props.history.push('/tags')
             }}
           >
-            {this.renderContent('tags')}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -69,10 +68,9 @@ class Tags extends Component {
             key="money"
             selected={false}
             onPress={() => {
-              
+              this.props.history.push('/money')
             }}
           >
-            {this.renderContent('money')}
           </TabBar.Item>
           <TabBar.Item
             icon={
@@ -95,22 +93,14 @@ class Tags extends Component {
             key="statistics"
             selected={false}
             onPress={() => {
-              
+              this.props.history.push('/statistics')
             }}
           >
-            {this.renderContent('statistics')}
           </TabBar.Item>
         </TabBar>
       </Fragment>
     );
   }
-
-  renderContent(params: string) {
-    return (
-      <Redirect to={"/" + params} />
-    )
-  }
-
 }
 
 export default Tags;
