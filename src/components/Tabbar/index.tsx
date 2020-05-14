@@ -12,7 +12,7 @@ class Tabbar extends Component<any, any> {
   }
 
   componentDidMount() { // 组件完成挂载时运行
-    console.log(this.props);
+    
   }
 
   render() {

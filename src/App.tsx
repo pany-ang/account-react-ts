@@ -6,8 +6,7 @@ import {
   Switch,
   Route,
   // Link,
-  Redirect,
-  // withRouter
+  Redirect
 } from "react-router-dom";
 import Tags from 'pages/Tags/index';
 import Money from 'pages/Money/index';

@@ -16,5 +16,8 @@ npx create-react-app . --typescript
 npm install --save react-router-dom
 npm install @types/react-router-dom
 
+## CSS-in-JS
+React项目中解决css的热门方案: styled-components
+
 ## svg更强大的用法：SVG symbols
 需要借助两个库：svg-sprite-loader 和 svgo-loader

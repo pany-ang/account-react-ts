@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import 'pages/Money/index.scss'
 import Tabbar from 'components/Tabbar/index'
 
@@ -15,11 +15,12 @@ class Money extends Component<any, any> {
 
   render() {
     return (
-      // 如果外层不想用div包裹，可以用Fragment
-      <Fragment>
-        <div className="content">Money</div>
-        <Tabbar></Tabbar>
-      </Fragment>
+        <div className="money_main">
+          <div className="money_content"></div>
+          <div>
+            <Tabbar></Tabbar>
+          </div>
+        </div>
     );
   }
 }

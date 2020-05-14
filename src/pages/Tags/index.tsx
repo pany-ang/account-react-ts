@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import 'pages/Tags/index.scss'
 import Tabbar from 'components/Tabbar/index'
 
 class Tags extends Component<any, any> {
@@ -14,11 +15,12 @@ class Tags extends Component<any, any> {
 
   render() {
     return (
-      // 如果外层不想用div包裹，可以用Fragment
-      <Fragment>
-        <h2>Tags</h2>
-        <Tabbar></Tabbar>
-      </Fragment>
+      <div className="tags_main">
+        <div className="tags_content"></div>
+        <div>
+          <Tabbar></Tabbar>
+        </div>
+      </div>
     );
   }
 }
