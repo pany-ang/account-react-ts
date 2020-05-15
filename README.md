@@ -93,4 +93,4 @@ React中的anChange是值改变后触发，原生onchange是值改变后失去�
 ***
 
 ### TS中的Partial：只需要满足一部分类型就行
-![Partial](https://i.loli.net/2020/05/15/O1YaP5M9W8iuxHU.png)
+![Partial](https://i.loli.net/2020/05/15/wNT2mMytBfOAUnK.png)
