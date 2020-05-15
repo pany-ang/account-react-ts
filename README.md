@@ -58,7 +58,8 @@ const App: React.FC = (props) => {
 ### React函数组件中使用state
 ```
 const [tags, setTags] = useState<String[]>(['衣', '食', '住', '行'])
-还可以缩小范围：const [tags, setTags] = useState<('衣' | '食' | '住' | '行')[]>(['衣', '食', '住', '行'])
+还可以用TS的联合字符串缩小范围：
+const [tags, setTags] = useState<('衣' | '食' | '住' | '行')[]>(['衣', '食', '住', '行'])
 ```
 
 ***
