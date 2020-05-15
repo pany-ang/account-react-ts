@@ -53,7 +53,15 @@ const App: React.FC = (props) => {
 }
 ```
 
+***
+
 ### React函数组件中使用state
 ```
 const [tags, setTags] = useState<String[]>(['衣', '食', '住', '行'])
 ```
+
+***
+
+### 受控组件与非受控组件
+![受控组件](https://i.loli.net/2020/05/15/wTaRfGprX9AvnzE.png)
+![非受控组件](https://i.loli.net/2020/05/15/riCDAw5ZG4HPcRz.png)
