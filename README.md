@@ -76,7 +76,7 @@ React中的anChange是值改变后触发，原生onchange是值改变后失去�
 
 ### TS 使用 typeof 和 keyof
 ![手写](https://i.loli.net/2020/05/15/3HuboildzQaKpxC.png)
-![优化](https://i.loli.net/2020/05/15/wGtxYcuHKjgrIds.png)
+![优化](https://i.loli.net/2020/05/15/i2Ur9IX5BEO8Y6T.png)
 
 ***
 
