@@ -85,5 +85,12 @@ React中的anChange是值改变后触发，原生onchange是值改变后失去�
 ### TS中使用事件委托：
 ![事件委托](https://i.loli.net/2020/05/15/P5C96agmHznZckG.png)
 
+***
+
 ### 使用TS后，props需要这样写才能接收到值：
 ![props](https://i.loli.net/2020/05/15/O1YaP5M9W8iuxHU.png)
+
+***
+
+### TS中的Partial：只需要满足一部分类型就行
+![Partial](https://i.loli.net/2020/05/15/O1YaP5M9W8iuxHU.png)
