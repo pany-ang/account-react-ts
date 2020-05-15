@@ -72,6 +72,13 @@ const [tags, setTags] = useState<String[]>(['衣', '食', '住', '行'])
 ### React的onChange和原生onchange不同:
 React中的anChange是值改变后触发，原生onchange是值改变后失去焦点或者按下回车时触发
 
+***
+
 ### TS 使用 typeof 和 keyof
 ![手写](https://i.loli.net/2020/05/15/3HuboildzQaKpxC.png)
 ![优化](https://i.loli.net/2020/05/15/wGtxYcuHKjgrIds.png)
+
+***
+
+### TS中使用事件委托：
+![事件委托](https://i.loli.net/2020/05/15/P5C96agmHznZckG.png)
