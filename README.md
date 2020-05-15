@@ -58,10 +58,20 @@ const App: React.FC = (props) => {
 ### React函数组件中使用state
 ```
 const [tags, setTags] = useState<String[]>(['衣', '食', '住', '行'])
+还可以缩小范围：const [tags, setTags] = useState<('衣' | '食' | '住' | '行')[]>(['衣', '食', '住', '行'])
 ```
 
 ***
 
-### 受控组件与非受控组件
+### 受控组件与非受控组件（类似于Vue中的v-model.lazy）
 ![受控组件](https://i.loli.net/2020/05/15/wTaRfGprX9AvnzE.png)
 ![非受控组件](https://i.loli.net/2020/05/15/riCDAw5ZG4HPcRz.png)
+
+***
+
+### React的onChange和原生onchange不同:
+React中的anChange是值改变后触发，原生onchange是值改变后失去焦点或者按下回车时触发
+
+### TS 使用 typeof 和 keyof
+![手写](https://i.loli.net/2020/05/15/3HuboildzQaKpxC.png)
+![优化](https://i.loli.net/2020/05/15/wGtxYcuHKjgrIds.png)
