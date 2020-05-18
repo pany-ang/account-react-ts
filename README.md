@@ -99,3 +99,42 @@ React中的anChange是值改变后触发，原生onchange是值改变后失去�
 
 ### 封装一个自定义Hook：在函数里面使用useState或者其他useXXX，并且return一些读写接口出去
 ![封装一个自定义Hook](https://i.loli.net/2020/05/18/hqms1wVgSFWMazp.png)
+
+***
+
+### ReactRouter
+```
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  // Link,
+  Redirect
+} from "react-router-dom";
+const App: React.FC = () => {
+  return (
+    <Fragment>
+      <Router>
+        <div>
+          <Switch>
+            <Redirect exact from="/" to="/money" />
+            <Route exact path="/tags" component={Tags} />
+            <Route exact path="/money" component={Money} />
+            <Route exact path="/statistics" component={Statistics} />
+            <Route path="*" component={NoMatch} />
+          </Switch>
+        </div>
+      </Router>
+    </Fragment>
+  )
+}
+export default App;
+```
+```
+编程式路由：
+this.props.history.push('/tags')
+```
+```
+子组件中使用访问路由可以引入withRouter：
+import { withRouter } from "react-router-dom";
+```
