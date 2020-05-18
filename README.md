@@ -133,6 +133,8 @@ export default App;
 ```
 编程式路由：
 this.props.history.push('/tags')
+this.props.location
+this.props.match
 ```
 ```
 子组件中使用访问路由可以引入withRouter：
