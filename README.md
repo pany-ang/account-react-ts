@@ -140,3 +140,13 @@ this.props.match
 子组件中使用访问路由可以引入withRouter：
 import { withRouter } from "react-router-dom";
 ```
+
+***
+
+### Hook API 获取动态参数
+```
+type Params {
+  id: string
+}
+let { id } = useParams<>()
+```
