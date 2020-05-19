@@ -150,3 +150,14 @@ type Params {
 }
 let { id } = useParams<Params>()
 ```
+
+***
+
+### TS的&符号实践（props接收label和input元素所有属性）
+![TS的&符号](https://i.loli.net/2020/05/19/1ohUEzNK7p6SuL8.png)
+
+***
+
+### React语法：<input {...rest} />（将一个对象转变为元素的属性）
+![<input {...rest} />](https://i.loli.net/2020/05/19/dCkB8lheVLyXP4H.png)
+***
