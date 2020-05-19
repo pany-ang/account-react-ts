@@ -148,5 +148,5 @@ import { withRouter } from "react-router-dom";
 type Params {
   id: string
 }
-let { id } = useParams<>()
+let { id } = useParams<Params>()
 ```
