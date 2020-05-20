@@ -65,7 +65,7 @@ const [tags, setTags] = useState<('衣' | '食' | '住' | '行')[]>(['衣', '食
 
 ***
 
-### 受控组件与非受控组件（类似于Vue中的v-model.lazy）
+### 受控组件与非受控组件（类似于Vue中的v-model.lazy）（useRef）
 ![受控组件](https://i.loli.net/2020/05/15/wTaRfGprX9AvnzE.png)
 ![非受控组件](https://i.loli.net/2020/05/15/riCDAw5ZG4HPcRz.png)
 
