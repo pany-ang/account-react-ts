@@ -135,6 +135,9 @@ export default App;
 this.props.history.push('/tags')
 this.props.location
 this.props.match
+Hooks API：
+import { useHistory } from "react-router-dom";
+useHistory().goBack()
 ```
 ```
 子组件中使用访问路由可以引入withRouter：
