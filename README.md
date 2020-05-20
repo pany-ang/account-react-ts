@@ -146,7 +146,7 @@ import { withRouter } from "react-router-dom";
 
 ***
 
-### Hook API 获取动态参数
+### Hooks API 获取动态参数
 ```
 type Params {
   id: string
@@ -163,4 +163,14 @@ let { id } = useParams<Params>()
 
 ### React语法：<input {...rest} />（将一个对象转变为元素的属性）
 ![<input {...rest} />](https://i.loli.net/2020/05/19/dCkB8lheVLyXP4H.png)
+
+***
+
+### Hooks API 监听数据变化
+```
+useEffect( () => {
+  // 回调
+}, [data])
+```
+
 ***
