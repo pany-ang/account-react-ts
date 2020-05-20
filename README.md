@@ -55,7 +55,7 @@ const App: React.FC = (props) => {
 
 ***
 
-### React函数组件中使用state
+### React函数组件中使用state：useState
 ```
 用<>定义类型参数：
 const [tags, setTags] = useState<String[]>(['衣', '食', '住', '行'])
@@ -130,23 +130,25 @@ const App: React.FC = () => {
 }
 export default App;
 ```
-```
 编程式路由：
+```
 this.props.history.push('/tags')
 this.props.location
 this.props.match
+```
 Hooks API：
+```
 import { useHistory } from "react-router-dom";
 useHistory().goBack()
 ```
-```
 子组件中使用访问路由可以引入withRouter：
+```
 import { withRouter } from "react-router-dom";
 ```
 
 ***
 
-### Hooks API 获取动态参数
+### useParams 获取动态参数
 ```
 type Params {
   id: string
@@ -166,11 +168,16 @@ let { id } = useParams<Params>()
 
 ***
 
-### Hooks API 监听数据变化
+### useEffect 监听数据变化
 ```
 useEffect( () => {
-  // 回调
+  // data改变时执行
 }, [data])
+```
+```
+useEffect( () => {
+  // 当不写data的时候，就是第一次渲染的时候执行（相当于mounted生命周期函数）
+}, [])
 ```
 
 ***
